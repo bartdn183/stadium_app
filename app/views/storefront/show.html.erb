@@ -2,16 +2,18 @@
 <div class="row">
 	<% @products_by_vendor.each do |product| %>
 		<div class="col-sm-4">
+			
 			<div class="panel panel-default">
+				<%= button_to line_items_path(product_id: product) do %>
 				<div class="panel-body">
 					<div style="height:275px">
 						<p><%= product.name %></p>
 						<p><%= image_tag product.image.url(:thumb) %></p>
 						<p><%= number_to_currency product.price %></p>
 						<p><%= product.description %></p>
-						<p> <%= button_to 'Add to Cart', line_items_path(product_id: product), class: "btn btn-success btn-sm" %></p>
 					</div>
 				</div>	
+				<% end %>
 			</div>
 		</div>
 	<% end %>

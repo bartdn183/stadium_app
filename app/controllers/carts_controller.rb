@@ -28,6 +28,7 @@ end
 
   # GET /carts/1
   def show
+
     unless current_user.id == @cart.user_id
       flash[:notice] = "You don't have access to that order!"
       redirect_to root_path
@@ -70,7 +71,7 @@ end
   def destroy
     @cart.destroy if @cart.id == session[:cart_id]
     respond_to do |format|
-      format.html { redirect_to carts_url, notice: 'Cart was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Cart was successfully destroyed.' }
     end
   end
 
