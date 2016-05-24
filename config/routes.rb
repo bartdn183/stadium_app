@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
 
+  resources :stadia
   post 'order_complete' => 'carts#order_complete'
 
   resources :line_items
   resources :carts
   devise_for :users
   get 'storefront/show'
+  get 'storefront/all_vendors'
 
   resources :vendors
   resources :products
@@ -13,7 +15,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'storefront#all_vendors'
+ 
+
+  root 'storefront#welcome'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

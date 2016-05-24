@@ -13,3 +13,241 @@
  *= require_tree .
  *= require_self
  */
+body	{
+	font-family: 'Lato', sans-serif;
+	background-color: #e6e6e6;
+/*	background-image: url("/assets/stadium.jpg");
+	background-size: cover;*/
+}
+
+.jumbotron h1	{
+
+	font-family: 'Lobster', cursive;
+	color: #FFFFFF;
+	font-size: 100px;
+	margin-top: -35px;
+
+}
+
+.jumbotron h2	{
+
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	color: #FFFFFF;
+	font-size: 24px;
+	
+}
+
+.jumbotron	{
+
+	background-image: url(stadium12.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 770px;
+	/*min-height: 500px;*/
+	width: auto;
+
+}
+
+.navbar	{
+
+	margin-top: -40px;
+	width: 100%;
+
+}
+
+h3 a {
+	color: white;
+
+}
+h3 a:hover {
+	color:yellow;
+	text-decoration: none;
+}
+
+#container {
+
+	height: auto;
+	min-width: 400px;
+	width: 75%;
+	margin: 140px auto 0px auto;
+	/*background-color: black;*/
+	text-align: center;
+	text-shadow: 5px 5px 5px #000000;
+
+}
+
+input.stadium, input.section, input.row, input.seat	{
+
+	border: 3px solid white;
+	height: 60px;
+	background: transparent;
+	margin: 20px 20px 0 0;
+	font-size: 18px;
+	color: white;
+	/*background: rgba(255, 255, 255, .2);*/
+
+}
+
+input.stadium {
+
+	width: 100%;
+
+}
+
+input.section {
+
+	width: 160px;
+
+}
+
+input.row {
+
+	width: 80px;
+
+}
+
+input.seat {
+
+	width: 80px;
+
+}
+
+::-webkit-input-placeholder {
+
+   color: white;
+   font-family: 'Lato', sans-serif;
+   padding-left: 20px;
+
+}
+
+input.submit	{
+
+	width: 60px;
+	height: 60px;
+	border: 3px solid white;
+	margin: 0 0 0 0;
+	background: white;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 18px;
+
+}
+
+form.location	{
+
+	width:450px;
+	padding-top: 40px;
+	margin:0px auto;
+	/*background: red;*/
+
+}
+
+#nav-container	{
+
+	width: 100%;
+	height: 60px;
+
+}
+.nav-links	{
+
+	float: left;
+	width: 50%;
+	height: 100%;
+	text-align: center;
+	color: white;
+	transition: background-color 0.5s ease;
+	background-color: #111;
+	
+}
+
+.nav-links:hover {
+
+	background-color: #333;
+
+}
+
+#nav-home	{
+	
+	
+}
+
+#nav-login	{
+	
+	
+}
+#h2
+
+
+#featured-container	{
+
+	width: 100%;
+	height: auto;
+	min-height: 51px;
+	background-color: #D9D9D9;
+	margin-top: -20px;
+	text-align: center;
+	
+}
+
+#featured-container h1	{
+
+	font-size: 45px;
+	padding: 10px 0 0 0;
+	font-family: 'Lato', sans-serif;
+	color: #111;
+	font-weight: 100;
+}
+
+.vendor	{
+
+	height: 400px;
+	width: 100% 
+
+}
+
+#red	{
+
+	background-image: url(food.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+#red h2	{
+	font-family: 'Raleway', sans-serif;
+	font-size: 200px;
+	text-align: center;
+	padding: 50px 0 0 0;
+}
+
+#blue	{
+
+	background-image: url(food3.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+#blue h2	{
+	font-family: 'Raleway', sans-serif;
+	font-size: 200px;
+	text-align: center;
+	padding: 50px 0 0 0;
+}
+
+#green	{
+
+	background-image: url(food2.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+#green	h2	{
+	font-family: 'Raleway', sans-serif;
+	font-size: 200px;
+	text-align: center;
+	padding: 50px 0 0 0;
+}
+
+
+

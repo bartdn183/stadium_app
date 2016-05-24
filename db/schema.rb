@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160519201722) do
+ActiveRecord::Schema.define(version: 20160523204150) do
 
   create_table "carts", force: :cascade do |t|
     t.integer  "user_id"
@@ -47,6 +47,12 @@ ActiveRecord::Schema.define(version: 20160519201722) do
 
   add_index "products", ["vendor_id"], name: "index_products_on_vendor_id"
 
+  create_table "stadia", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -73,6 +79,9 @@ ActiveRecord::Schema.define(version: 20160519201722) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "stadium_id"
   end
+
+  add_index "vendors", ["stadium_id"], name: "index_vendors_on_stadium_id"
 
 end

@@ -1,6 +1,5 @@
-<h2>Stadium App</h2>
 	<div class="row">
-		<% @vendors.each do |vendor| %>
+		<% @vendors_by_stadium.each do |vendor| %>
 			<div class="col-sm-12">
 				<%= link_to image_tag(vendor.image.url(:medium)), storefront_show_path(vendor_id: vendor.id) %>
 			</div>

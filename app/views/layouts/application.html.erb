@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>StadiumApp</title>
+	<meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+  <title>Stadium Runner</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+
+    <!-- Bootstrap -->
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,100,200' rel='stylesheet' type='text/css'>
 </head>
 <body>
+
 <%= render 'layouts/navbar' %>
-<div class="container">
+
 <%= yield %>
-</div>
+
 
 </body>
 </html>
