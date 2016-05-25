@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
+  devise_for :users
 
-  resources :stadia
   post 'order_complete' => 'carts#order_complete'
 
   resources :line_items
   resources :carts
-  devise_for :users
+
+  root 'storefront#welcome'
+
   get 'storefront/show'
   get 'storefront/all_vendors'
-
+  resources :stadia
   resources :vendors
   resources :products
   # The priority is based upon order of creation: first created -> highest priority.
@@ -16,9 +18,6 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
  
-
-  root 'storefront#welcome'
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
