@@ -1,7 +1,7 @@
 class VendorsController < ApplicationController
   before_filter :authenticate_user!
   before_action :set_vendor, only: [:show, :edit, :update, :destroy]
-
+  authorize_resource
   # GET /vendors
   def index
     @vendors = Vendor.all

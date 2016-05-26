@@ -1,6 +1,7 @@
 class StadiaController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_stadium, only: [:show, :edit, :update, :destroy]
-
+  authorize_resource
   # GET /stadia
   # GET /stadia.json
   def index

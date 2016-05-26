@@ -1,41 +1,35 @@
+<div class="jumbotron">
 
-
-<div id="welcome_page">
-
-<h3>Stadium Runner</h3>
-
-	<div class="row">
-		<% @stadia.each do |stadium| %>
-			<div class="col-sm-12">
-				<%= link_to stadium.name, storefront_all_vendors_path(stadium_id: stadium.id) %>
-			</div>
-		<% end %>
-	</div>
-<div id="container">
+    <div id="container">
 
     
     <h1>Stadium Runner</h1>
     
     <h2>We get the food so you don’t miss a play</h2>
 
+    <div class="stadium_selector">
+        <%= form_tag(controller: 'storefront', action: 'all_vendors', method: "get") do %>
+            <% stadia_array = @stadia.map { |stadium| [stadium.name, stadium.id] } %>
+            <%= select_tag(:stadium_id, options_for_select(stadia_array), :class => "form-control") %>
+            <%= submit_tag("Go", :class => "btn btn-default")  %>
+        <% end %>
+    </div>
 
 
   <form class="location" action="#">
-    
-    <input class="stadium" type="text" name="address" placeholder="Stadium">
 
+
+    
     <input class="section" type="text" name="address" placeholder="Section">
 
     <input class="row" type="text" name="address" placeholder="Row">
 
     <input class="seat" type="text" name="address" placeholder="Seat">
 
-    <input class="submit" type="submit" value="Go">
 
   </form>
 
+  </div>
 
+  </div>
 
-</div>
-
-</div>

@@ -5,4 +5,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 has_many :carts
+
+def admin?
+	role == "admin"
+end
+
+def guest?
+	role == "guest"
+end
+
+
 end

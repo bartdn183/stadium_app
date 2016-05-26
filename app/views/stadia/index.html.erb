@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="container">
 <h1>Listing Stadia</h1>
 
 <table class="table">
@@ -23,5 +23,7 @@
 </table>
 
 <br>
-
+<% if can? :create, Stadium %>
 <%= link_to 'New Stadium', new_stadium_path %>
+<% end %>
+</div>

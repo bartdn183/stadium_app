@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   root 'storefront#welcome'
 
   get 'storefront/show'
-  get 'storefront/all_vendors'
+  get 'all_vendors' => 'storefront#all_vendors'
+  post 'all_vendors' => 'storefront#all_vendors'
   resources :stadia
   resources :vendors
   resources :products
